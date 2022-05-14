@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int factorial(int n)
+{
+    if(n==0)  //base case (very important in recursion functions)
+    return 1;  
+    
+    int partialAns=factorial(n-1);
+    
+    return n*partialAns; // n! = n * (n-1)!
+    
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    if(n<0)
+    {
+        cout <<"Error"; //print Error if n is negative
+    }
+    else
+    {
+        cout<<factorial(n); //call the function if n is not negative
+    }
+    
+    return 1;
+}
